@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Script -->
+    <div class="light-mode">
+      <div class="mode-wrapper">
+        <div class="light-switch"><i class="bi bi-brightness-high"></i></div>
+        <button class="switch"></button>
+        <div class="dark-switch"><i class="bi bi-moon"></i></div>
+      </div>
+    </div>
+    <div class="music-container">
+      <div class="img-container">
+        <img src="img/jacinto-1.jpg" alt="" class="music-img" />
+        <div class="play-list"></div>
+      </div>
+      <h2 class="music-name">first music</h2>
+      <h3 class="music-artist">jacob</h3>
+      <div class="music-player">
+        <audio class="music" src="music/jacinto-1.mp3"></audio>
+      </div>
+      <div class="progress-container">
+        <div class="overlay-bar"></div>
+        <div class="progress"></div>
+      </div>
+      <div class="duration-wrapper">
+        <span id="current-time">0:00</span>
+        <span id="total-duration">2:06</span>
+      </div>
+      <div class="player-controls">
+        <div class="prev-control">
+          <i class="fas fa-backward" id="prevese" title="Previous"></i>
+        </div>
+        <div class="play-control">
+          <i class="fas fa-play-circle" id="play-pause" title="Play"></i>
+        </div>
+        <div class="next-control">
+          <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

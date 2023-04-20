@@ -1,0 +1,234 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #c9ced3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  position: relative;
+}
+body.night {
+  background: #242323;
+}
+
+.music-container {
+  width: 30%;
+  height: 50vh;
+  position: relative;
+  background-color: #eee;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1.4rem rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  border-radius: 1.4rem;
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.3);
+  perspective: 100rem;
+}
+.img-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 7rem auto 0 auto;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+.music-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music {
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+}
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 6px;
+  position: relative;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  /* change this to show progress */
+  width: 0%;
+  /* transition: width 0.1s linear; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.overlay-bar {
+  background: #666666;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  border-radius: 5px;
+  height: 100%;
+  /* change this to show progress */
+  width: 0%;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  /* position: relative;
+  top: -15px; */
+  /* left: 120px; */
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+#play {
+  font-size: 40px;
+}
+.main-button {
+  position: relative;
+  top: 3px;
+}
+
+.play-list {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #eee;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: all 0.3s linear;
+}
+
+.light-mode {
+  width: 5%;
+  /* background-color: red; */
+  height: 5vh;
+  border-radius: 1.2rem;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  top: 3rem;
+  left: 3rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2),
+    -0.1rem -0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.mode-wrapper {
+  position: relative;
+  transform: translateX(0rem);
+  transition: all 0.2s linear;
+}
+.switch {
+  height: 5.1vh;
+  width: 5.1vh;
+  background-color: rgb(87, 87, 87);
+  box-shadow: -5px -5px 0.5rem rgba(255, 255, 255, 0.1) inset,
+    5px 5px 0.5rem rgba(255, 255, 255, 0.1) inset;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+}
+.dark-switch {
+  background-color: rgb(49, 49, 49);
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  height: 5vh;
+  width: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.light-switch {
+  background-color: #eee;
+  position: absolute;
+  top: 0%;
+  left: -80%;
+  height: 5vh;
+  width: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bi-brightness-high {
+  /* background-color: #aaa; */
+  font-size: 1.2rem;
+}
+.bi-moon {
+  color: #ffffff;
+  /* text-shadow: 1rem 1rem 0.5rem rgba(255, 255, 255, 0.9);
+  text-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.9); */
+  font-size: 1.2rem;
+}
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
